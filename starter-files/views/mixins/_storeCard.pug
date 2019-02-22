@@ -1,7 +1,9 @@
 mixin storeCard(store = {})
 	.store
 		.store_hero
-			img(src=`/uploads${store.photo || store.png}`)
+			-store__actions
+				button soon
+			img(src=`/uploads/${store.photo || 'store.png'}`)
 			h2.title
 				a(href=`/store/${store.slug}`) #{store.name}
 		.store_details
