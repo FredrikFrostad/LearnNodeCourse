@@ -3,7 +3,7 @@ const router = express.Router();
 const storeController = require('../controllers/storeController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', cathcErrors(storeController.getStores));
+router.get('/', catchErrors(storeController.getStores));
 router.get('/stores', storeController.getStores);
 router.get('/add', storeController.addStore);
 router.post('/add', catchErrors(storeController.createStore));
